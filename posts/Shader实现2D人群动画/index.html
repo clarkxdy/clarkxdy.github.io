@@ -39,24 +39,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="ShaderGraph实现2D人群动画" />
+<meta property="og:title" content="Implement 2D crowd animation using ShaderGraph" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="通过 uv 结合帧动画等方式实现状态不一的人群，例如高低不同，颜色不同，帧动画播放速度不同，人群间隔不同等，并且可以通过 linerenderer 来规划路径。 局限：在平面上效果最佳，且不能有太大的倾斜角度" />
-<meta property="og:description" content="通过 uv 结合帧动画等方式实现状态不一的人群，例如高低不同，颜色不同，帧动画播放速度不同，人群间隔不同等，并且可以通过 linerenderer 来规划路径。 局限：在平面上效果最佳，且不能有太大的倾斜角度" />
+<meta name="description" content="Through uv combined with animation and other methods to achieve crowds with different states, such as different heights, different colors, different animation playback speeds, different crowd space gaps, etc., and the linerenderer can be used to plan the path. Limitations: the best effect on the plane, and can not have too much tilt angle" />
+<meta property="og:description" content="Through uv combined with animation and other methods to achieve crowds with different states, such as different heights, different colors, different animation playback speeds, different crowd space gaps, etc., and the linerenderer can be used to plan the path. Limitations: the best effect on the plane, and can not have too much tilt angle" />
 <link rel="canonical" href="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" />
 <meta property="og:url" content="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" />
 <meta property="og:site_name" content="Xud" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-03-20T17:30:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="ShaderGraph实现2D人群动画" />
+<meta property="twitter:title" content="Implement 2D crowd animation using ShaderGraph" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-20T17:30:00+08:00","datePublished":"2022-03-20T17:30:00+08:00","description":"通过 uv 结合帧动画等方式实现状态不一的人群，例如高低不同，颜色不同，帧动画播放速度不同，人群间隔不同等，并且可以通过 linerenderer 来规划路径。 局限：在平面上效果最佳，且不能有太大的倾斜角度","headline":"ShaderGraph实现2D人群动画","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/"},"url":"http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-20T17:30:00+08:00","datePublished":"2022-03-20T17:30:00+08:00","description":"Through uv combined with animation and other methods to achieve crowds with different states, such as different heights, different colors, different animation playback speeds, different crowd space gaps, etc., and the linerenderer can be used to plan the path. Limitations: the best effect on the plane, and can not have too much tilt angle","headline":"Implement 2D crowd animation using ShaderGraph","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/"},"url":"http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>ShaderGraph实现2D人群动画 | Xud
+  <title>Implement 2D crowd animation using ShaderGraph | Xud
   </title>
 
   <!--
@@ -279,7 +279,7 @@
         
 
           
-            <span>ShaderGraph实现2D人群动画</span>
+            <span>Implement 2D crowd animation using ShaderGraph</span>
           
 
         
@@ -403,9 +403,6 @@
 
       
     
-      
-      
-        
       
       
 
@@ -861,7 +858,7 @@
 
 
 
-<h1 data-toc-skip>ShaderGraph实现2D人群动画</h1>
+<h1 data-toc-skip>Implement 2D crowd animation using ShaderGraph</h1>
 
 <div class="post-meta text-muted">
 
@@ -924,8 +921,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="737 words">
-  <em>4 min</em> read</span>
+  title="488 words">
+  <em>2 min</em> read</span>
 
 
       <!-- page views -->
@@ -938,33 +935,33 @@
 
 <div class="post-content">
   <blockquote>
-  <p>通过 <strong><em>uv</em></strong> 结合帧动画等方式实现状态不一的人群，例如高低不同，颜色不同，帧动画播放速度不同，人群间隔不同等，并且可以通过 linerenderer 来规划路径。
-局限：在平面上效果最佳，且不能有太大的倾斜角度</p>
+  <p>Through <strong><em>uv</em></strong> combined with animation and other methods to achieve crowds with different states, such as different heights, different colors, different animation playback speeds, different crowd space gaps, etc., and the linerenderer can be used to plan the path.
+Limitations: the best effect on the plane, and can not have too much tilt angle</p>
 </blockquote>
 
 <ul>
-    <li><a href="#introMethod">实现方式</a><ul><li><a href="#uvx">uv.x设置</a></li><li><a href="#spacing">间隔设置</a></li><li><a href="#vanim">sprite sheet设置</a></li></ul></li>
-	<li><a href="#extend">拓展</a></li>
+    <li><a href="#introMethod">Implementation</a><ul><li><a href="#uvx">uv.x setting</a></li><li><a href="#spacing">Interval setup</a></li><li><a href="#vanim">sprite sheet setup</a></li></ul></li>
+	<li><a href="#extend">Extends</a></li>
 </ul>
 
 <blockquote>
-  <p>用以前画的一段序列动画来做演示，颜色随机和高低以及速度等没有设置很明显。</p>
+  <p>Using a sequence of frame animation drawn before for demonstration.</p>
 </blockquote>
 
-<p><img data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_Shader实现2D人群动画/00_preview.gif" alt="Desktop View" width="600" data-proofer-ignore></p>
+<p><img data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_Shader实现2D人群动画/00_preview.gif" alt="Demo" width="600" data-proofer-ignore></p>
 
-<h2 id="introMethod"><span class="mr-2"><em>实现方式：</em></span><a href="#introMethod" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h2 id="introMethod"><span class="mr-2"><em>IMPLEMENTATION:</em></span><a href="#introMethod" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
 
 <blockquote>
-  <p>最重要的一点是利用世界坐标x的值来作为uv.x值。
-其余效果大致从这展开。</p>
+  <p>The key is to use the value of the world coordinate x as the uv.x value.
+The rest of the effects roughly expand from here.</p>
 </blockquote>
 
 <ol>
   <li>
-    <div id="uvx">将世界坐标的x轴作为uv.x，uv.y暂时先保持不变。这样就可以做到随意改变宽度却不影响列数。</div>
+    <div id="uvx">Set the x-axis of the world coordinate as <code>uv.x</code>, and keep uv.y unchanged for the time being. This allows you to change the width at will without affecting the number of columns.</div>
 
-    <p>因为uv.y不变所以可以使用 linerenderer 来做上下坡的效果。</p>
+    <p>Because <code>uv.y</code> is unchanged, you can use linerenderer to do the effect of uphill and downhill.</p>
   </li>
 </ol>
 
@@ -974,7 +971,7 @@
 
 <ol>
   <li>
-    <div id="spacing">对上一步得到的uv.x取模后作为透明通道就可以用来表现间隔（记得取绝对值）</div>
+    <div id="spacing">After taking the modulo of the <code>uv.x</code> obtained in the previous step, it can be used as a transparent channel to represent the interval (remember to take the absolute value)</div>
   </li>
 </ol>
 
@@ -982,41 +979,42 @@
 
 <ol>
   <li>
-    <div id="vanim">添加序列动画需要对uv.y进行修改。该方法建议sprite sheet的行数为1（行数不为1的话间隔要是2的倍数才行）。可以通过取模等简单计算得到序列帧动画。</div>
+    <div id="vanim"></div>
+    <p>Adding sequence animation requires modifications to <code>uv.y</code>. This method recommends that the number of rows of the sprite sheet be 1 (if the number of rows is not 1, the interval should be a multiple of 2). Sequence frame animation can be obtained by simple calculations such as modulo.</p>
   </li>
 </ol>
 
 <p><img width="625" data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_Shader实现2D人群动画/03_VAnim.png" data-proofer-ignore></p>
 
-<h2 id="extend"><span class="mr-2"><em>拓展：</em></span><a href="#extend" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h2 id="extend"><span class="mr-2"><em>EXTENDS:</em></span><a href="#extend" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
 
-<p>用实现方法1. 中得到的u取整做随机再通过lerp可以对该shader中的各种值做随机，从而模拟人群（或物体）的随机感。
-因为u是取整后再做随机，所以能保证每一列各自分配到一个随机值。</p>
+<p>Use the integer part of the u obtained in the implementation  <strong><em>method 1</em></strong>  to make random, and then use lerp to randomize the various values in the shader, thereby simulating the randomness of the crowd (or objects).
+Because <code class="language-plaintext highlighter-rouge">uv.x</code> is rounded and then random, it can ensure that each column is assigned a random value.</p>
 
-<p>例如：</p>
+<p>E.g:</p>
 
 <ul>
   <li>
-    <p>在v做各种计算前就可以做随机高度缩放（缩放的程度取决于sprite sheet中每一帧上方的空白有多少）</p>
+    <p>Random height scaling can be done before <code class="language-plaintext highlighter-rouge">uv.y</code> does various calculations (the degree of scaling depends on how much space is above each frame in the sprite sheet)</p>
   </li>
   <li>
-    <p>sprite sheet可以用这个添加一个偏移使得播放顺序以及速度不一致</p>
+    <p>Sprite sheets can use this to add an offset to make the playback order and speed different.</p>
   </li>
   <li>
-    <p>同理间隔和颜色也可以随机</p>
+    <p>The interval and color can also be random</p>
   </li>
   <li>
-    <p>每个实例还可以根据世界位置信息来做偏移和随机。可以使用object position，不过在使用linerenderer的时候不可以，因为其object position为世界坐标原点 (0, 0, 0) 。</p>
+    <p>Each instance can also be offset and randomized based on <code class="language-plaintext highlighter-rouge">world position</code>. <code class="language-plaintext highlighter-rouge">Object position</code> can be used, but not when using linerenderer, because its <code class="language-plaintext highlighter-rouge">object position</code> is the origin of world coordinates (0, 0, 0).</p>
 
-    <p>在使用linerenderer时可以直接使用world position 的z来做偏移或随机，前提是这些物体和z轴同一方向（有时可能会出现闪烁，尤其是在相机改变焦距或者发生z方向位移时。解决方法：floor或ceil(a*positionWS.z)</p>
+    <p>When using the linerenderer, you can directly use the z of the world position for offset or randomization, provided that these objects are in the same direction as the z-axis (sometimes there may be flickering, especially when the camera changes focus or z-direction displacement occurs. Solution: <code class="language-plaintext highlighter-rouge">floor</code> or <code class="language-plaintext highlighter-rouge">ceil(a*positionWS.z)</code> )</p>
   </li>
   <li>
-    <p>使用linerenderer的好处是可以编辑路径，且操作方便，但是处理随机不太方便。</p>
+    <p>The advantage of using linerenderer is that the path can be edited, and the operation is convenient, but it is not very convenient to deal with randomness.</p>
 
-    <p>可以根据需求做一个简单的模型，并使用vertex color来做顶点位移的遮罩。这样就可以实现简单的上下坡，甚至朝向与z轴偏一些也有不错的效果。</p>
+    <p>You can make a simple model according to your needs and use vertex color to do the position offset. This allows for simple up and down slopes, and even a little offset from the z-axis has a good effect.</p>
   </li>
   <li>
-    <p>最后整合后的shadergraph：</p>
+    <p>The final integrated shadergraph:</p>
   </li>
 </ul>
 
@@ -1086,19 +1084,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=ShaderGraph实现2D人群动画 - Xud&amp;url=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Implement 2D crowd animation using ShaderGraph - Xud&amp;url=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=ShaderGraph实现2D人群动画 - Xud&amp;u=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Implement 2D crowd animation using ShaderGraph - Xud&amp;u=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/&amp;text=ShaderGraph实现2D人群动画 - Xud" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/&amp;text=Implement 2D crowd animation using ShaderGraph - Xud" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1410,7 +1408,7 @@
   2022-03-20
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>简易水波纹(不使用RenderTexture和粒子系统)</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Simple water ripple (without RenderTexture and Particle System)</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1420,19 +1418,9 @@
 
 
                 
-  简易水波的生成只需要 中心位置 信息即可，其余美术效果可以在shader里实现。
+  The generation of simple water waves only needs the center position information, and the rest of the artistic effects can be achieved in the shader.
 
-  由于shader不能暂存信息，所以需要脚本将角色位置信息传递过来
-
-  （geometry shader 可以暂存信息？）
-
-
-
-    实现方式
-    Custom FunctionCustom Function代码参考
-	Script代码参考
-    参考效果
-    拓展波光粼粼 Shade...
+  Since the shader cannot temporarily store ...
               </p>
             </div>
           </div>
@@ -1460,7 +1448,7 @@
   
   <a href="/posts/RipplesWithoutRenderTexture/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>简易水波纹(不使用RenderTexture和粒子系统)</p>
+    <p>Simple water ripple (without RenderTexture and Particle System)</p>
   </a>
   
 

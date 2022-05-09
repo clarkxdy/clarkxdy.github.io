@@ -39,24 +39,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="简易水波纹(不使用RenderTexture和粒子系统)" />
+<meta property="og:title" content="Simple water ripple (without RenderTexture and Particle System)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="简易水波的生成只需要 中心位置 信息即可，其余美术效果可以在shader里实现。 由于shader不能暂存信息，所以需要脚本将角色位置信息传递过来 （geometry shader 可以暂存信息？）" />
-<meta property="og:description" content="简易水波的生成只需要 中心位置 信息即可，其余美术效果可以在shader里实现。 由于shader不能暂存信息，所以需要脚本将角色位置信息传递过来 （geometry shader 可以暂存信息？）" />
+<meta name="description" content="The generation of simple water waves only needs the center position information, and the rest of the artistic effects can be achieved in the shader. Since the shader cannot temporarily store the information, the script needs to pass the character position information to the shader. (Can the geometry shader store information?)" />
+<meta property="og:description" content="The generation of simple water waves only needs the center position information, and the rest of the artistic effects can be achieved in the shader. Since the shader cannot temporarily store the information, the script needs to pass the character position information to the shader. (Can the geometry shader store information?)" />
 <link rel="canonical" href="http://localhost:4000/posts/RipplesWithoutRenderTexture/" />
 <meta property="og:url" content="http://localhost:4000/posts/RipplesWithoutRenderTexture/" />
 <meta property="og:site_name" content="Xud" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-03-20T17:30:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="简易水波纹(不使用RenderTexture和粒子系统)" />
+<meta property="twitter:title" content="Simple water ripple (without RenderTexture and Particle System)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-20T17:30:00+08:00","datePublished":"2022-03-20T17:30:00+08:00","description":"简易水波的生成只需要 中心位置 信息即可，其余美术效果可以在shader里实现。 由于shader不能暂存信息，所以需要脚本将角色位置信息传递过来 （geometry shader 可以暂存信息？）","headline":"简易水波纹(不使用RenderTexture和粒子系统)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RipplesWithoutRenderTexture/"},"url":"http://localhost:4000/posts/RipplesWithoutRenderTexture/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-20T17:30:00+08:00","datePublished":"2022-03-20T17:30:00+08:00","description":"The generation of simple water waves only needs the center position information, and the rest of the artistic effects can be achieved in the shader. Since the shader cannot temporarily store the information, the script needs to pass the character position information to the shader. (Can the geometry shader store information?)","headline":"Simple water ripple (without RenderTexture and Particle System)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/RipplesWithoutRenderTexture/"},"url":"http://localhost:4000/posts/RipplesWithoutRenderTexture/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>简易水波纹(不使用RenderTexture和粒子系统) | Xud
+  <title>Simple water ripple (without RenderTexture and Particle System) | Xud
   </title>
 
   <!--
@@ -279,7 +279,7 @@
         
 
           
-            <span>简易水波纹(不使用RenderTexture和粒子系统)</span>
+            <span>Simple water ripple (without RenderTexture and Particle System)</span>
           
 
         
@@ -953,7 +953,7 @@
 
 
 
-<h1 data-toc-skip>简易水波纹(不使用RenderTexture和粒子系统)</h1>
+<h1 data-toc-skip>Simple water ripple (without RenderTexture and Particle System)</h1>
 
 <div class="post-meta text-muted">
 
@@ -1016,8 +1016,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="1348 words">
-  <em>7 min</em> read</span>
+  title="1167 words">
+  <em>6 min</em> read</span>
 
 
       <!-- page views -->
@@ -1030,37 +1030,37 @@
 
 <div class="post-content">
   <blockquote>
-  <p>简易水波的生成只需要 <strong><em>中心位置</em></strong> 信息即可，其余美术效果可以在shader里实现。</p>
+  <p>The generation of simple water waves only needs the <strong><em>center position</em></strong> information, and the rest of the artistic effects can be achieved in the shader.</p>
 
-  <p>由于shader不能暂存信息，所以需要脚本将角色位置信息传递过来</p>
+  <p>Since the shader cannot temporarily store the information, the script needs to pass the character position information to the shader.</p>
 
-  <p>（geometry shader 可以暂存信息？）</p>
+  <p>(Can the geometry shader store information?)</p>
 </blockquote>
 
 <ul>
-    <li><a href="#introMethod">实现方式</a></li>
-    <li><a href="#customfunction">Custom Function</a><ul><li><a href="#customfunctionref">Custom Function代码参考</a></li></ul></li>
-	<li><a href="#script">Script</a><ul><li><a href="#scriptref">代码参考</a></li></ul></li>
-    <li><a href="#demo">参考效果</a></li>
-    <li><a href="#extend">拓展</a><ul><li><a href="#watersparkle">波光粼粼 Shadergraph</a></li><li><a href="#watersparkledemo">波光粼粼参考效果</a></li></ul></li>
+    <li><a href="#introMethod">Method</a></li>
+    <li><a href="#customfunction">Custom Function</a><ul><li><a href="#customfunctionref">Custom Function code reference</a></li></ul></li>
+	<li><a href="#script">Script</a><ul><li><a href="#scriptref">Code reference</a></li></ul></li>
+    <li><a href="#demo">Reference effect</a></li>
+    <li><a href="#extend">Extends</a><ul><li><a href="#watersparkle">Sparkling Shadergraph</a></li><li><a href="#watersparkledemo">Sparkling reference effect</a></li></ul></li>
 </ul>
 
-<h2 id="introMethod"><span class="mr-2"><em>实现方式：</em></span><a href="#introMethod" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h2 id="introMethod"><span class="mr-2"><em>Method</em></span><a href="#introMethod" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
 
 <ol>
   <li>
-    <p>将角色位置以一定时间间隔储存到一个数组中 <span style="background-color: #bbe9ff">Vector4 waterRipples[]</span></p>
+    <p>Store character positions in an array at intervals <code class="language-plaintext highlighter-rouge">Vector4 waterRipples[]</code></p>
   </li>
   <li>
-    <p>将单个水波纹存活时间储存在 <span style="background-color: #bbe9ff">waterRipples.w</span> 中</p>
+    <p>Store individual water ripple lifetimes in <code class="language-plaintext highlighter-rouge">waterRipples.w</code></p>
 
-    <p>（时间最好需要考虑到角色是否移动，跳跃等）</p>
+    <p>(Time preferably needs to take into account whether the character moves, jumps, etc.)</p>
   </li>
   <li>
-    <p>将 <span style="background-color: #bbe9ff">waterRipples</span> 传递给 Shader</p>
+    <p>Pass <code class="language-plaintext highlighter-rouge">waterRipples</code> to Shader</p>
   </li>
   <li>
-    <p>在shader里计算所有水波纹即可</p>
+    <p>Calculate all water ripples in the shader</p>
   </li>
 </ol>
 
@@ -1070,7 +1070,7 @@
 
 <ul>
   <li>
-    <p>单个水波纹代码如下：</p>
+    <p>A single water ripple code is as follows:</p>
 
     <div class="language-c# highlighter-rouge"><div class="code-header">
         <span data-label-text="C#"><i class="fas fa-code small"></i></span>
@@ -1109,20 +1109,22 @@
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">dist</code>是到中心点的距离，其中<code class="language-plaintext highlighter-rouge">float3(0, .5, 0)</code>是中心点的高度偏移，用来调整水波中心位置的高度；<code class="language-plaintext highlighter-rouge">float3(1, 1, 2)</code>是用来缩放z方向上的距离，这样得到的就是一个椭圆形的水波（如果角色不在z轴为0的平面上的话不可以直接使用）</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">RemapFloat01()</code>将一个范围映射到01（自定义）</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">changingRadius</code>为一个0到1的值，用来控制半径变化以及透明度。</p>
+    <p><code class="language-plaintext highlighter-rouge">dist</code> is the distance to the center point, where <code class="language-plaintext highlighter-rouge">float3(0, .5, 0)</code> is the height offset of the center point, used to adjust the height of the center position of the water ripple.</p>
 
-    <p>半径大小的变化需要先快后慢（蓝色曲线），透明度也是需要先快后慢最后消失（橙色曲线）。</p>
+    <p><code class="language-plaintext highlighter-rouge">float3(1, 1, 2)</code> is It is used to scale the distance in the z direction, so that an elliptical water ripple is obtained (if the character is not on the plane with the z axis of 0, it cannot be used directly)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">RemapFloat01()</code> maps a range to 01 (custom)</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">changingRadius</code> is a value from 0 to 1 that controls the radius change and transparency.</p>
+
+    <p>The change of radius needs to be fast and then slow (blue curve), and the change of transparency also needs to be fast, then slow and finally disappear (orange curve).</p>
 
     <p><img width="300" data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_InteractiveWaterRipples/01_graphic-centerX.png" data-proofer-ignore></p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">rings</code>就是通过frac和abs来做循环</p>
+    <p><code class="language-plaintext highlighter-rouge">rings</code> is to loop through <code class="language-plaintext highlighter-rouge">frac()</code> and <code class="language-plaintext highlighter-rouge">abs()</code>.</p>
   </li>
 </ul>
 
@@ -1130,7 +1132,7 @@
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">void SetWaterRipples()</code>用来执行计算和输出结果到shadergraph。</p>
+    <p><code class="language-plaintext highlighter-rouge">void SetWaterRipples()</code> is used to perform calculations and output results to shadergraph.</p>
 
     <div class="language-c# highlighter-rouge"><div class="code-header">
         <span data-label-text="C#"><i class="fas fa-code small"></i></span>
@@ -1156,7 +1158,7 @@
 
 <p><img width="400" data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_InteractiveWaterRipples/05_rings.gif" data-proofer-ignore></p>
 
-<h4 id="customfunctionref"><span class="mr-2">Custom Function参考代码如下：</span><a href="#customfunctionref" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
+<h4 id="customfunctionref"><span class="mr-2">The Custom Function reference code is as follows:</span><a href="#customfunctionref" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
 
 <div class="language-c# highlighter-rouge"><div class="code-header">
         <span data-label-text="C#"><i class="fas fa-code small"></i></span>
@@ -1242,16 +1244,16 @@
 
 <ul>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">ripplesParticlesSize</code>和<code class="language-plaintext highlighter-rouge">waterRipples[]</code>需要传入shader。其中<code class="language-plaintext highlighter-rouge">waterRipples[].xyz</code>代表水波的中心位置，<code class="language-plaintext highlighter-rouge">waterRipples[].w</code>代表水波的存活时间；</p>
+    <p><code class="language-plaintext highlighter-rouge">ripplesParticlesSize</code> and <code class="language-plaintext highlighter-rouge">waterRipples[]</code> need to be passed to the shader. Where <code class="language-plaintext highlighter-rouge">waterRipples[].xyz</code> represents the center position of the water ripple, and <code class="language-plaintext highlighter-rouge">waterRipples[].w</code> represents the survival time of the water ripple;</p>
   </li>
   <li>
-    <p><code class="language-plaintext highlighter-rouge">waterRipples[].w</code>可以被<code class="language-plaintext highlighter-rouge">time_dissolving</code> 和<code class="language-plaintext highlighter-rouge"> time_jump</code>ing影响到，<code class="language-plaintext highlighter-rouge">time_jumping</code>由<code class="language-plaintext highlighter-rouge">time_grounded</code>和<code class="language-plaintext highlighter-rouge">time_air</code>决定。</p>
+    <p><code class="language-plaintext highlighter-rouge">waterRipples[].w</code> can be affected by <code class="language-plaintext highlighter-rouge">time_dissolving</code> and <code class="language-plaintext highlighter-rouge">time_jumping</code>, <code class="language-plaintext highlighter-rouge">time_jumping</code> is determined by <code class="language-plaintext highlighter-rouge">time_grounded</code> and <code class="language-plaintext highlighter-rouge">time_air</code>.</p>
 
-    <p>这样一来<code class="language-plaintext highlighter-rouge">waterRipples[].w</code>的值就可以大致用来表示角色在运动时、起跳时、在空中时以及落地时的不同状态。</p>
+    <p>In this way, the value of <code class="language-plaintext highlighter-rouge">waterRipples[].w</code> can be roughly used to represent the different states of the character when moving, when taking off, when in the air and when landing.</p>
   </li>
 </ul>
 
-<h4 id="scriptref"><span class="mr-2">参考代码如下：</span><a href="#scriptref" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
+<h4 id="scriptref"><span class="mr-2">reference code:</span><a href="#scriptref" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
 
 <div class="language-csharp highlighter-rouge"><div class="code-header">
         <span data-label-text="C#"><i class="fas fa-code small"></i></span>
@@ -1495,21 +1497,21 @@
 
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="extend"><span class="mr-2"><em>拓展:</em></span><a href="#extend" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
+<h2 id="extend"><span class="mr-2"><em>Extends</em></span><a href="#extend" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
 
 <blockquote>
-  <p>水面添加波光粼粼效果</p>
+  <p>Add sparkling effect to water surface</p>
 </blockquote>
 
-<h4 id="watersparkle"><span class="mr-2">波光粼粼效果近处比较少，远处比较明显。</span><a href="#watersparkle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
+<h4 id="watersparkle"><span class="mr-2">The effect is more noticeable at a distance.</span><a href="#watersparkle" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
 
-<p>可以使用 <code class="language-plaintext highlighter-rouge">positionWS.z</code> 结合 <code class="language-plaintext highlighter-rouge">Screen Position</code>  最后添加噪波等完成</p>
+<p>This can be done using <code class="language-plaintext highlighter-rouge">positionWS.z</code> combined with <code class="language-plaintext highlighter-rouge">Screen Position</code> to add noise at the end</p>
 
-<p><em>（下面是屏幕空间近小远大参考）</em></p>
+<p><em>(Below is the reference of screen space near and far)</em></p>
 
 <p><img width="600" data-src="https://raw.githubusercontent.com/clarkxdy/Common/main/b/images/img_InteractiveWaterRipples/03_sparklecone.png" data-proofer-ignore></p>
 
-<h4 id="watersparkledemo"><span class="mr-2">波光效果：</span><a href="#watersparkledemo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
+<h4 id="watersparkledemo"><span class="mr-2">Demo:</span><a href="#watersparkledemo" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4></h4>
 
 <h2 id="finalsg"><span class="mr-2"><em>Final Shadergraph：</em></span><a href="#finalsg" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2></h2>
 
@@ -1572,19 +1574,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=简易水波纹(不使用RenderTexture和粒子系统) - Xud&amp;url=http://localhost:4000/posts/RipplesWithoutRenderTexture/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Simple water ripple (without RenderTexture and Particle System) - Xud&amp;url=http://localhost:4000/posts/RipplesWithoutRenderTexture/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=简易水波纹(不使用RenderTexture和粒子系统) - Xud&amp;u=http://localhost:4000/posts/RipplesWithoutRenderTexture/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Simple water ripple (without RenderTexture and Particle System) - Xud&amp;u=http://localhost:4000/posts/RipplesWithoutRenderTexture/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http://localhost:4000/posts/RipplesWithoutRenderTexture/&amp;text=简易水波纹(不使用RenderTexture和粒子系统) - Xud" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http://localhost:4000/posts/RipplesWithoutRenderTexture/&amp;text=Simple water ripple (without RenderTexture and Particle System) - Xud" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1896,7 +1898,7 @@
   2022-03-20
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>ShaderGraph实现2D人群动画</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Implement 2D crowd animation using ShaderGraph</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1906,22 +1908,7 @@
 
 
                 
-  通过 uv 结合帧动画等方式实现状态不一的人群，例如高低不同，颜色不同，帧动画播放速度不同，人群间隔不同等，并且可以通过 linerenderer 来规划路径。
-局限：在平面上效果最佳，且不能有太大的倾斜角度
-
-
-
-    实现方式uv.x设置间隔设置sprite sheet设置
-	拓展
-
-
-
-  用以前画的一段序列动画来做演示，颜色随机和高低以及速度等没有设置很明显。
-
-
-
-
-实现方...
+  Through uv combined with animation and other methods to achieve crowds with different states, such as different heights, different colors, different animation playback speeds, different crowd sp...
               </p>
             </div>
           </div>
@@ -1942,7 +1929,7 @@
   
   <a href="/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>ShaderGraph实现2D人群动画</p>
+    <p>Implement 2D crowd animation using ShaderGraph</p>
   </a>
   
 
