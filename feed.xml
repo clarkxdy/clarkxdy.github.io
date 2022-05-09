@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Xud</title>
   <subtitle>... ...</subtitle>
-  <updated>2022-05-10T00:31:27+08:00</updated>
+  <updated>2022-05-10T00:49:03+08:00</updated>
   <author>
     <name>Xud</name>
     <uri>http://localhost:4000/</uri>
@@ -65,13 +65,13 @@
   
   <entry>
     <title>2D crowd animation using ShaderGraph</title>
-    <link href="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" rel="alternate" type="text/html" title="2D crowd animation using ShaderGraph" />
+    <link href="http://localhost:4000/posts/2DCrowdAnimationShadergraph/" rel="alternate" type="text/html" title="2D crowd animation using ShaderGraph" />
     <published>2022-03-20T17:30:00+08:00</published>
   
     <updated>2022-03-20T17:30:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/</id>
-    <content src="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" />
+    <id>http://localhost:4000/posts/2DCrowdAnimationShadergraph/</id>
+    <content src="http://localhost:4000/posts/2DCrowdAnimationShadergraph/" />
     <author>
       <name>Xud</name>
     </author>
