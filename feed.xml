@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Xud</title>
   <subtitle>... ...</subtitle>
-  <updated>2022-05-09T23:28:10+08:00</updated>
+  <updated>2022-05-10T00:31:27+08:00</updated>
   <author>
     <name>Xud</name>
     <uri>http://localhost:4000/</uri>
@@ -47,7 +47,7 @@
 
 
       
-  The generation of simple water waves only needs the center position information, and the rest of the artistic effects can be achieved in the shader.
+  The generation of simple water ripples only needs the center position information, and the rest of the artistic effects can be achieved in the shader.
 
   Since the shader cannot temporarily store the information, the script needs to pass the character position information to the shader.
 
@@ -56,7 +56,7 @@
 
 
     Method
-    Custom FunctionCustom Function code refere...
+    Custom FunctionCustom Function code refe...
     </summary>
   
 
@@ -64,8 +64,8 @@
 
   
   <entry>
-    <title>Implement 2D crowd animation using ShaderGraph</title>
-    <link href="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" rel="alternate" type="text/html" title="Implement 2D crowd animation using ShaderGraph" />
+    <title>2D crowd animation using ShaderGraph</title>
+    <link href="http://localhost:4000/posts/Shader%E5%AE%9E%E7%8E%B02D%E4%BA%BA%E7%BE%A4%E5%8A%A8%E7%94%BB/" rel="alternate" type="text/html" title="2D crowd animation using ShaderGraph" />
     <published>2022-03-20T17:30:00+08:00</published>
   
     <updated>2022-03-20T17:30:00+08:00</updated>
